@@ -1,0 +1,801 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    position: relative;
+    width: 100%;
+    background-color: #11131b;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+} 
+    
+
+/*Para el separador*/
+
+.Separador{
+    aspect-ratio: 1280/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.arriba{
+    background-image: url("../img/separadorArriba.svg");
+    
+}
+.abajo{
+    background-image: url("../img/separadorAbajo.svg");
+}
+
+/* esto es para el menu superior */
+.menuSuperior{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    position: fixed;
+    background:linear-gradient(180deg, rgba(0, 0, 0, 0.5) 35.94%, rgba(0, 0, 0, 0) 83.85%);
+    z-index: 10;
+}
+
+.menuSuperiorContenedor{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.menuSuperior ul{
+    list-style: none;
+}
+
+.menuSuperior ul li{
+    display: inline-block;
+    padding: 1em;
+    transition: all 0.3s ease;
+}
+
+.menuSuperior ul li:hover{
+    transform: scale(1.2);
+background-color: rgba(47, 59, 110, 0.6);
+}
+
+.menuSuperior ul li a{
+    color: #fff;
+    text-decoration: none;
+
+}
+/* esto es para la zona de Home */
+.seccionHome{
+    position: relative;
+    height: 120vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+}
+.seccionHome .fondoRadial1{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/fondoRadial1.png");
+    background-size: fill;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.seccionHome h1{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 82px;
+    color: #fff;
+    margin: 0;
+    position: relative;
+    max-width: 900px;
+    padding: 0 400px;
+}
+
+
+
+/* esto es para la zona de Sobre Mi */
+.seccionSobreMi{
+    position: relative;
+    height: 700px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.logoSobreMi{
+    background-image: url("../img/Logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    
+    z-index: 2;
+	
+}
+.seccionSobreMi .textoSeccionSobreMi {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    padding-left: 20%;	
+}
+.seccionSobreMi h1{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 72px;
+    color: #fff;
+    margin: 0;
+    position: relative;
+    min-width: 231px;
+    max-width: 231px;
+}
+.seccionSobreMi p{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    display: block;
+    min-width: 320px;
+    max-width: 720px;
+    color: #fff;
+    display: block;
+    
+}
+
+.olaArriba{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.olaArriba svg {
+    position: relative;
+    display: block;
+    width: calc(166% + 1.3px);
+    height: 199px;
+    transform: rotateY(180deg);
+}
+
+.olaArriba {
+    fill: #263257;
+}
+.olaAbajo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.olaAbajo svg {
+    position: relative;
+    display: block;
+    width: calc(156% + 1.3px);
+    height: 159px;
+}
+
+.olaAbajo .shape-fill {
+    fill: #263257;
+}
+
+
+/* esto es para la zona de Trabajos */
+
+.Carrousel{
+    width: 60%;
+    height: 100vh;
+    max-width: 120em;
+    background-color: #26222e3f;
+    border-radius: 30px;
+    box-shadow: 1px 3px 8px 1px rgba(216, 220, 233, 0.59);
+    margin: 0 auto;
+    padding: 2em;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 1;
+    margin-top: 100px;
+}
+
+/* esto es para el Carrousel */
+.Carrousel .carrouselContenedor{
+    width: 600%;
+    height: 85%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+
+    background: rgba(217, 217, 217, 0);
+    border-radius: 30px;
+    box-shadow: 1px 3px 8px 1px rgba(50, 55, 70, 0.59);
+
+    transition : all 0.5s ease;
+    transform: translateX(0%);
+}
+
+.Carrousel .imagenCarrousel{
+    width: calc( 100% / 6 - 6em);
+    min-height: 20vh;
+    height: 80vh;
+    background-color: #d9d9d900;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    justify-content: center;
+    object-fit: contain;
+    object-position: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 1px 3px 8px 1px rgba(162, 174, 211, 0.548);
+}
+.Carrousel .imagenCarrousel img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.Carrousel .puntos{
+    width: 100%;
+    background-color: rgb(13, 37, 53);
+    padding: .4em;
+    display: flex;
+    margin: 1em 0;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+
+}
+.Carrousel .punto{
+    width: 2em;
+    height: 2em;
+    background-color: rgba(68, 68, 78, 0.164);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 0.5em;
+    cursor: pointer;
+    transition : all 0.5s ease;
+    box-shadow: 1px 3px 8px 1px rgba(162, 174, 211, 0.548);}
+.Carrousel .punto.activo{
+    background-color: rgb(255, 255, 255);
+}
+
+/* esto es para Contacto */
+
+.seccionContacto{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+.contactoCaja{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contactoCaja h2{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    color: #fff;
+    margin: 0;
+    position: relative;
+    min-width: 231px;
+    max-width: 231px;
+}
+
+.contactoCaja_izq{
+    width:45%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.contactoCaja_der{
+    width: 45%;
+    margin-bottom: 10px;
+}
+
+.contactoCaja_izq input{
+    width: 50%;
+    padding: 1em;
+    border: 1px solid rgb(255, 255, 255 , 0.5);
+    background-color: rgb(255, 255, 255 , 0.1);
+    border-radius: 10px;
+    outline: none;
+    color: #fff;
+    box-shadow: 1px 3px 8px 1px rgba(162, 174, 211, 0.548);
+
+}
+.contactoCaja_izq textarea{
+    width: 100%;
+    padding: 1em;
+    border: 1px solid rgb(255, 255, 255 , 0.5);
+    background-color: rgb(255, 255, 255 , 0.1);
+    border-radius: 10px;
+    outline: none;
+    color: #fff;
+    
+    box-sizing: border-box;
+    box-shadow: 1px 3px 8px 1px rgba(162, 174, 211, 0.548);
+}
+.contactoCaja_izq button{
+    width: 50%;
+    padding: 1em;
+    border: 1px solid rgb(255, 255, 255 , 0.5);
+    background-color: rgb(255, 255, 255 , 0.1);
+    margin-top: 10px;
+    border-radius: 10px;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    ;
+}
+.contactoCaja button:hover{
+    background-color: rgba(170, 161, 161, 0.6);
+    color: #000;
+}
+
+/* esto es para el formulario */
+.container {
+        position: relative;
+        width: 100%;
+        max-width: auto;
+        min-height: 100vh;
+        padding: 2rem;
+
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .form {
+        width: 100%;
+        max-width: 820px;
+        background-color: #263257;
+        border-radius: 10px;
+        box-shadow: 0 0 20px 1px rgba(17, 18, 19, 0.1);
+        z-index: 1000;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-form {
+        background-color:rgb(40, 94, 131);
+        position: relative;
+    }
+    
+    .circle {
+        border-radius: 50%;
+        background: linear-gradient(135deg, transparent 20%, #149279);
+        position: absolute;
+    }
+    
+    .circle.one {
+        width: 130px;
+        height: 130px;
+        top: 130px;
+        right: -40px;
+    }
+    
+    .circle.two {
+        width: 80px;
+        height: 80px;
+        top: 10px;
+        right: 30px;
+    }
+    
+    .contact-form:before {
+        content: "";
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        background-color: #1abc9c;
+        transform: rotate(45deg);
+        top: 50px;
+        left: -13px;
+    }
+    
+    form {
+        padding: 2.3rem 2.2rem;
+        z-index: 10;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .title {
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 1;
+        margin-bottom: 0.7rem;
+    }
+    
+    .input-container {
+        position: relative;
+        margin: 1rem 0;
+    }
+    
+    .input {
+        width: 100%;
+        outline: none;
+        border: 2px solid #fafafa;
+        background: none;
+        padding: 0.6rem 1.2rem;
+        color: #fff;
+        font-weight: 500;
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
+        border-radius: 25px;
+        transition: 0.3s;
+    }
+    
+    textarea.input {
+        padding: 0.8rem 1.2rem;
+        min-height: 150px;
+        border-radius: 22px;
+        resize: none;
+        overflow-y: auto;
+    }
+    
+    .input-container label {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        padding: 0 0.4rem;
+        color: #fafafa;
+        font-size: 0.9rem;
+        font-weight: 400;
+        pointer-events: none;
+        z-index: 1000;
+        transition: 0.5s;
+    }
+    
+    .input-container.textarea label {
+        top: 1rem;
+        transform: translateY(0);
+    }
+    
+    .btn {
+        padding: 0.6rem 1.3rem;
+        background-color: rgb(255, 255, 255 , 0.1);
+        border: 2px solid rgb(255, 255, 255 , 0.5);
+        font-size: 0.95rem;
+        color: #1abc9c;
+        line-height: 1;
+        border-radius: 25px;
+        outline: none;
+        cursor: pointer;
+        transition: 0.3s;
+        margin: 0;
+
+        cursor: pointer;
+    }
+    
+    .btn:hover {
+        background-color: transparent;
+        color: #fff;
+    }
+    
+    .input-container span {
+        position: absolute;
+        top: 0;
+        left: 25px;
+        transform: translateY(-50%);
+        font-size: 0.8rem;
+        padding: 0 0.4rem;
+        color: transparent;
+        pointer-events: none;
+        z-index: 500;
+    }
+    
+    .input-container span:before,
+    .input-container span:after {
+        content: "";
+        position: absolute;
+        width: 10%;
+        opacity: 0;
+        transition: 0.3s;
+        height: 5px;
+        background-color: #1abc9c;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .input-container span:before {
+        left: 50%;
+    }
+    
+    .input-container span:after {
+        right: 50%;
+    }
+    
+    .input-container.focus label {
+        top: 0;
+        transform: translateY(-50%);
+        left: 25px;
+        font-size: 0.8rem;
+    }
+    
+    .input-container.focus span:before,
+    .input-container.focus span:after {
+        width: 50%;
+        opacity: 1;
+    }
+    
+    .contact-info {
+        padding: 2.3rem 2.2rem;
+        position: relative;
+    }
+    
+    .contact-info .title {
+        color: #1abc9c;
+    }
+    
+    .text {
+        color: #ffffff;
+        margin: 1.5rem 0 2rem 0;
+    }
+    
+    .information {
+        display: flex;
+        color: #dde1ec;
+        margin: 0.7rem 0;
+        align-items: center;
+        font-size: 0.95rem;
+    }
+    
+    .icon {
+        width: 28px;
+        margin-right: 0.7rem;
+    }
+    
+    .social-media {
+        padding: 2rem 0 0 0;
+    }
+    
+    .social-media p {
+        color: #ffffff;
+    }
+    
+    .social-icons {
+        display: flex;
+        margin-top: 0.5rem;
+    }
+    
+    .social-icons a {
+        width: 35px;
+        height: 35px;
+        border-radius: 5px;
+        background: linear-gradient(45deg, #61e9f3b7, #146092);
+        color: #ffffff;
+        text-align: center;
+        line-height: 35px;
+        margin-right: 0.5rem;
+        transition: 0.3s;
+    }
+    
+    .social-icons a:hover {
+        transform: scale(1.05);
+    }
+
+    .social-media a.artstation{
+        background-image: url("../img/icons8-artstation-32.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .social-media a.twitter{
+        background-image: url("../img/icons8-twitter-24.png");
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .social-media a.twitch{
+        background-image: url("../img/icons8-twitch-50.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .social-media a.linkedin {
+        background-image: url("../img/icons8-linkedin-24.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .contact-info:before {
+        content: "";
+        position: absolute;
+        width: 110px;
+        height: 100px;
+        border: 22px solid #bfd4e6;
+        border-radius: 50%;
+        bottom: -77px;
+        right: 50px;
+        opacity: 0.3;
+    }
+    
+    
+    .square {
+        position: absolute;
+        height: 400px;
+        top: 50%;
+        left: 50%;
+        transform: translate(181%, 11%);
+        opacity: 0.2;
+    }
+    
+    @media (max-width: 850px) {
+
+        .logoSobreMi img{
+            background-image: none;
+            translate: y(-100%);
+        }
+        .Carrousel{
+            height:65%;
+            aspect-ratio: 16/9;
+        }
+        .Carrousel .carrouselContenedor{
+        
+            height: 65%;
+            padding: 2em;
+        
+            background: rgba(217, 217, 217, 0);
+            border-radius: 30px;
+            transition: all 0.5s ease-in-out;
+            transform: translateX(0%);
+        }
+        
+        .Carrousel .imagenCarrousel{
+        
+            width: calc( 100% / 6 - 6em);
+            min-height: 20vh;
+            height: 40vh;
+            background-color: #d9d9d965;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 30px;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 1px 3px 8px 1px rgba(162, 174, 211, 0.548);
+        }
+
+        .form {
+        grid-template-columns: 1fr;
+        }
+    
+        .contact-info:before {
+        bottom: initial;
+        top: -75px;
+        right: 65px;
+        transform: scale(0.95);
+        }
+    
+        .contact-form:before {
+        top: -13px;
+        left: initial;
+        right: 70px;
+        }
+    
+        .square {
+        transform: translate(140%, 43%);
+        height: 350px;
+        }
+    
+    
+        .text {
+        margin: 1rem 0 1.5rem 0;
+        }
+    
+        .social-media {
+        padding: 1.5rem 0 0 0;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .container {
+        padding: 1.5rem;
+        }
+    
+        .contact-info:before {
+        display: none;
+        }
+    
+        .square{
+        display: none;
+        }
+    
+        form,
+        .contact-info {
+        padding: 1.7rem 1.6rem;
+        }
+    
+        .text,
+        .information,
+        .social-media p {
+        font-size: 0.8rem;
+        }
+    
+        .title {
+        font-size: 1.15rem;
+        }
+    
+        .social-icons a {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        }
+    
+        .icon {
+        width: 23px;
+        }
+    
+        .input {
+        padding: 0.45rem 1.2rem;
+        }
+    
+        .btn {
+        padding: 0.45rem 1.2rem;
+        }
+    }
+    
+/*esto es para el footer */
+.footer{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    position: fixed;
+    background:linear-gradient(180deg, rgba(0, 0, 0, 0.0) 20.94%, rgba(0, 0, 0, 0.8) 80.85%);
+    z-index: 10;
+    bottom: 0;
+}
